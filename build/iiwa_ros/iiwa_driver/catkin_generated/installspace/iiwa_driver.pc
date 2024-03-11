@@ -1,0 +1,8 @@
+prefix=/home/liu_xu/Documents/ROS/catkin_iiwa/install
+
+Name: iiwa_driver
+Description: Description of iiwa_driver
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp message_runtime geometry_msgs tf std_msgs sensor_msgs hardware_interface controller_manager urdf realtime_tools

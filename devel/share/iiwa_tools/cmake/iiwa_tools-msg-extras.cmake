@@ -1,0 +1,2 @@
+set(iiwa_tools_MESSAGE_FILES "")
+set(iiwa_tools_SERVICE_FILES "/home/liu_xu/Documents/ROS/catkin_iiwa/src/iiwa_ros/iiwa_tools/srv/GetFK.srv;/home/liu_xu/Documents/ROS/catkin_iiwa/src/iiwa_ros/iiwa_tools/srv/GetIK.srv;/home/liu_xu/Documents/ROS/catkin_iiwa/src/iiwa_ros/iiwa_tools/srv/GetJacobian.srv;/home/liu_xu/Documents/ROS/catkin_iiwa/src/iiwa_ros/iiwa_tools/srv/GetJacobians.srv;/home/liu_xu/Documents/ROS/catkin_iiwa/src/iiwa_ros/iiwa_tools/srv/GetGravity.srv;/home/liu_xu/Documents/ROS/catkin_iiwa/src/iiwa_ros/iiwa_tools/srv/GetMassMatrix.srv")

@@ -1,0 +1,8 @@
+prefix=/home/liu_xu/Documents/ROS/catkin_iiwa/install
+
+Name: iiwa_control
+Description: Description of iiwa_control
+Version: 0.0.1
+Cflags: -I/usr/local/include
+Libs: -L${prefix}/lib -lCustomEffortController /usr/local/lib/libRobotControllers.so
+Requires: roscpp std_msgs hardware_interface controller_interface controller_manager urdf iiwa_tools

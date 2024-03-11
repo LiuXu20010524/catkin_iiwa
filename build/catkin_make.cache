@@ -1,0 +1,2 @@
+iiwa_impedance_controller/pinocchio_impedence_controller:iiwa_ros/iiwa_control:iiwa_ros/iiwa_description:iiwa_ros/iiwa_driver:iiwa_ros/iiwa_gazebo:iiwa_ros/iiwa_moveit:iiwa_ros/iiwa_ros:iiwa_ros/iiwa_tools
+-DCATKIN_DEVEL_PREFIX=/home/liu_xu/Documents/ROS/catkin_iiwa/devel -DCMAKE_INSTALL_PREFIX=/home/liu_xu/Documents/ROS/catkin_iiwa/install -G Unix Makefiles

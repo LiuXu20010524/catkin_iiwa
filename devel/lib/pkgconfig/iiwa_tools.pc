@@ -1,0 +1,8 @@
+prefix=/home/liu_xu/Documents/ROS/catkin_iiwa/devel
+
+Name: iiwa_tools
+Description: Description of iiwa_tools
+Version: 0.0.1
+Cflags: -I/home/liu_xu/Documents/ROS/catkin_iiwa/devel/include -I/home/liu_xu/Documents/ROS/catkin_iiwa/src/iiwa_ros/iiwa_tools/include
+Libs: -L${prefix}/lib -liiwa_tools
+Requires: roscpp message_runtime std_msgs sensor_msgs geometry_msgs

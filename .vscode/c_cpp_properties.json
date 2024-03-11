@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "${workspaceFolder}/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/opt/openrobots/include/**",
+                "${workspaceFolder}/src/iiwa_ros/iiwa_control/include/**",
+                "${workspaceFolder}/src/iiwa_ros/iiwa_gazebo/include/**",
+                "${workspaceFolder}/src/iiwa_ros/iiwa_tools/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/src/iiwa_ros/iiwa_driver/include/**",
+                "${workspaceFolder}/src/iiwa_ros/iiwa_driver/include/iiwa_driver/**",
+                "${workspaceFolder}/src/iiwa_impedance_controller/pinocchio_impedence_controller/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,10 @@
+<!--  -->
+<launch>
+    <arg name="controller" default="TorqueController"/>
+
+    <include file = "$(find iiwa_gazebo)/launch/iiwa_gazebo.launch">
+        <arg name = "controller" value = "$(arg controller)"/>
+    </include>
+
+    <node name = "pinocchio_impedence_control_node" pkg = "pinocchio_impedence_controller" type = "pinocchio_impedence_control_node" output = "screen"/>
+</launch>

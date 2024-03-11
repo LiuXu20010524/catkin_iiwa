@@ -1,0 +1,57 @@
+From cb623f2d6a9baabf6a232a90b5def1939d32326e Mon Sep 17 00:00:00 2001
+From: Matthias Mayr <matthias.mayr@cs.lth.se>
+Date: Mon, 12 Dec 2022 14:37:38 +0100
+Subject: [PATCH] Config: Disables SIMD, march=native by default
+
+iiwa_ros does not use it by default anymore
+---
+ wscript | 16 +++++++++++++---
+ 1 file changed, 13 insertions(+), 3 deletions(-)
+
+diff --git a/wscript b/wscript
+index 9978455..d4a8fea 100644
+--- a/wscript
++++ b/wscript
+@@ -22,6 +22,7 @@ def options(opt):
+     opt.load('compiler_c')
+ 
+     opt.add_option('--shared', action='store_true', help='build shared library', dest='build_shared')
++    opt.add_option('--native', action='store_true', help='build with march=native', dest='native')
+ 
+ 
+ def configure(conf):
+@@ -33,19 +34,28 @@ def configure(conf):
+     if conf.options.build_shared:
+         conf.env['lib_type'] = 'cxxshlib'
+ 
++    native = ''
++    native_icc = ''
++    if conf.options.native:
++        conf.msg('-march=native (AVX support)', 'yes', color='GREEN')
++        native = ' -march=native'
++        native_icc = ' mtune=native'
++    else:
++        conf.msg('-march=native (AVX support)', 'no (optional)', color='YELLOW')
++
+     if conf.env.CXX_NAME in ["icc", "icpc"]:
+         common_flags = "-Wall -std=c++11"
+-        opt_flags = " -O3 -xHost -mtune=native -unroll -g"
++        opt_flags = " -O3 -xHost -unroll -g" + native_icc
+     elif conf.env.CXX_NAME in ["clang"]:
+         common_flags = "-Wall -std=c++11"
+-        opt_flags = " -O3 -march=native -g -faligned-new"
++        opt_flags = " -O3 -g -faligned-new" + native
+     else:
+         gcc_version = int(conf.env['CC_VERSION'][0]+conf.env['CC_VERSION'][1])
+         if gcc_version < 47:
+             common_flags = "-Wall -std=c++0x"
+         else:
+             common_flags = "-Wall -std=c++11"
+-        opt_flags = " -O3 -march=native -g"
++        opt_flags = " -O3 -g" + native
+         if gcc_version >= 71:
+             opt_flags = opt_flags + " -faligned-new"
+ 
+-- 
+2.17.1
+

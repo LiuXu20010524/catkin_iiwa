@@ -1,0 +1,8 @@
+prefix=/home/liu_xu/Documents/ROS/catkin_iiwa/install
+
+Name: iiwa_moveit
+Description: Description of iiwa_moveit
+Version: 1.4.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

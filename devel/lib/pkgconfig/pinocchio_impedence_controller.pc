@@ -1,0 +1,8 @@
+prefix=/home/liu_xu/Documents/ROS/catkin_iiwa/devel
+
+Name: pinocchio_impedence_controller
+Description: Description of pinocchio_impedence_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
